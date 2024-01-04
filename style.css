@@ -1,0 +1,261 @@
+@import url("https://fonts.cdnfonts.com/css/netflix-font");
+
+:root {
+  --opacity: 0.69;
+  --red: red;
+  --netflix-font: "Netflix Font", Helvetica, sans-serif;
+  --bgtransperancy: rgba(0, 0, 0, 0.305);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--netflix-font);
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url(assets/images/background_image.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: max(1200px, 100vw);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.main .box {
+  width: 100%;
+  height: 100vh;
+  opacity: var(--opacity);
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  max-width: 75vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+nav img {
+  color: var(--red);
+  width: 130px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-items {
+  display: flex;
+  gap: 10px;
+}
+
+nav button {
+  position: relative;
+  z-index: 10;
+}
+
+.slogan {
+  height: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  gap: 24px;
+  padding: 0 30px;
+}
+
+.slogan > :first-child {
+  font-weight: 900;
+  font-size: 48px;
+}
+
+.slogan > :nth-child(2) {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.slogan > :nth-child(3) {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.seperator {
+  height: 8px;
+  background-color: #232323;
+  z-index: 25;
+}
+
+.btn {
+  padding: 3px 7px;
+  background-color: var(--red);
+  border: none;
+  border-style: solid;
+  border-color: var(--red);
+  border-radius: 0.1875rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-red-sm {
+  background-color: var(--bgtransperancy);
+  border-color: white;
+  border: 0.5px solid rgba(255, 255, 255, 0.377);
+}
+
+.btn-red {
+  background-color: var(--red);
+  color: white;
+  font-size: 22px;
+  padding: 9px 24px;
+}
+
+.main input,
+input {
+  background-color: var(--bgtransperancy);
+  border: 0.5px solid rgba(255, 255, 255, 0.377);
+  border-radius: 0.1875rem;
+  font-size: 17px;
+  padding: 14px 54px 14px 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 70vw;
+  height: 80vh;
+  margin: auto;
+  color: white;
+}
+
+.first-sec-image {
+  position: relative;
+}
+
+.first-sec-image img {
+  width: 556px;
+  position: relative;
+  z-index: 8;
+}
+
+.first-sec-image video {
+  position: absolute;
+  width: 410px;
+  top: 85px;
+  left: 72px;
+  right: 0;
+}
+
+.third-sec img {
+  width: 655px;
+}
+.third-sec video{
+  width: 423px;
+  left: 118px;
+  top: 43px;
+}
+
+section.first > div {
+  display: flex;
+  flex-direction: column;
+}
+
+section.first > div :first-child {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+section.first > div :nth-child(2) {
+  font-size: 24px;
+}
+
+.faqbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px;
+  width: 90vw;
+  gap: 10px;
+}
+
+.faqbox span {
+  transition: all 0.5s ease-out;
+  padding: 34px;
+  background-color: #414141a3;
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.faqbox span:hover {
+  background-color: #414141;
+}
+
+.faq > :first-child {
+  color: white;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 34px;
+}
+
+footer {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 34px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+footer :first-child {
+  font-size: 18px;
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+}
+
+footer div {
+}
+
+
+@media screen and (max-width:1280px) {
+  .first{
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
